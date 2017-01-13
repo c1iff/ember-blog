@@ -1,7 +1,7 @@
 <div class="container">
   <h1>articles below</h1>
   <ul>
-    {{#each model as |article|}}
+    {{#each model as |article index|}}  
       {{article-tile article=article}}
     {{/each}}
   </ul>

@@ -1,0 +1,11 @@
+<h1>Admin Page</h1>
+
+{{update-article updateArticle='update'}}
+  <ul>
+    {{#each model as |article|}}
+    {{update-article article=article update="update" destroyArticle="destroyArticle"}}
+    {{/each}}
+  </ul>
+
+
+{{new-article saveArticle='saveArticle'}}

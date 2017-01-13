@@ -1,0 +1,19 @@
+<div class="container article">
+  <h1 class="center-align thin">{{article.headline}}</h1>
+  <img src="{{article.photo}}" alt="" />
+  <div class="container">
+    <div class="content col m6 flow-text">
+      <p class="bold" ><b>{{article.author}} {{article.date}}</b></p>
+      <p>{{article.body}}</p>
+    </div>
+    <h2> Comments </h2>
+    <ul>
+      {{#each article.comments as |comment|}}
+      <p>
+        {{comment.content}}<br>
+        <button class="btn red" {{action 'deleteComment' comment}}>Delete Comment</button>
+      </p><hr>
+      {{/each}}
+    </ul>
+  </div>
+</div>
